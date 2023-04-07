@@ -23,6 +23,7 @@ ii. Writers
 iii. Actors
 iv. Genres
 v. Keywords
+vi. ~~Plot Overview~~
 
 While the initial model involved identifying the above metadata attributes and assigning a fixed weightage to each category toward the final similarity score, I found this method to be unweildy with inadequate recommendation quality. This method had several issues, few of which include:
 Existing keywords in dataset are generally poor and not representative of the main/acclaimed aspects of a movie.
