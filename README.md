@@ -42,7 +42,7 @@ The app uses the following methodology to make meaningful recommendations to the
         + 'director', 'direction', 'visuals', 'cinematography', 'style' contribute to the directors category
         + 'script', 'screenplay', 'writing', 'dialogue', 'story' contribute to writers category
         + 'actors', 'cast', 'performance', 'role' contribute to the actors category
-            -- The words that do not fall into any of the above buckets are considered keywords and added to the original keyword set of the example movie(from the Kaggle dataset). Given keywords have a fixed weightage of 0.4 the remaining categories of directors, writers, actors and genres are ordained a weightage on the basis of the fraction of counts they each totaled to as mentioned above. The weightage of all categories sums up to 1.
+        + The words that do not fall into any of the above buckets are considered keywords and added to the original keyword set of the example movie(from the Kaggle dataset). Given keywords have a fixed weightage of 0.4 the remaining categories of directors, writers, actors and genres are ordained a weightage on the basis of the fraction of counts they each totaled to as mentioned above. The weightage of all categories sums up to 1.
     - (Within-category) Element Weightage: While the above has determined the weightage of the overall category, we want to perform additional text analyses to understand people's sentiments towards particular elements within these categories. For example, while a cast may have 10 actors, which could lead to a high weightage of the actor category, only 2 of the 10 actors might be most lauded or singled out by the user reviews, so in this part we analyze the reviews by first identifying the entities (to isolate names of actors/directors/writers/keywords) using spacy entity classifier and then using nltk concordance search to arrive at positive sentiment score for each director/writer/actor of the movie. The smallest non-zero element's score is treated as the baseline and the other non-zero elements are assigned repetition counts as a ratio of that baseline value. These repetition counts inform us of the number of times the given element, say actor 'Leonardo DiCaprio' for the example movie Shutter Island needs to be repeated in the soup (that we will create for the final similarity score calculation) so that other movies that also have Leonardo DiCaprio receive higher similarity scores
 3) Similarity: So now armed with the weightage of each category (Director/Writer/Actor/Genre/Keywords) and the number of repetitions within each category (for eg within Actors category: LeonardoDiCaprio LeonardoDiCaprio LeonardoDiCaprio MarkRuffalo MichelleWilliams), we calculate the cosine similarity of each category of the example movie with the other movies. 
 
@@ -50,10 +50,10 @@ The app uses the following methodology to make meaningful recommendations to the
 We identify the top similar movies and perform one more calculation to take into the account the user's preferences: 
 The reasoning here is if the user enters an example movie which has a high user rating, then we ideally do not want to recommend a spoof or similar film which has very low ratings. So the following calculation ensures that the recommended movies meet the lower bound threshold calculated from the rating of the example movie-
 
-$$threshold = movie_score-((1-(10-movie_score)/10)*(3))$$
+$$threshold = score-((1-(10-score)/10)*(3))$$
 
-    - The above score results in a threshold of 7 for an example movie with a user rating of a perfect 10 (meaning only similar movies with a rating>= 7 will be recommended in this case)
-    - On the other hand a movie for which the example movie rating is 3, the formula will determine the threshold as 2.1, so will recommend only those similar movies which have a rating of atleast 2.1
+ * The above score results in a threshold of 7 for an example movie with a user rating of a perfect 10 (meaning only similar movies with a rating>= 7 will be recommended in this case)
+ * On the other hand a movie for which the example movie rating is 3, the formula will determine the threshold as 2.1, so will recommend only those similar movies which have a rating of atleast 2.1
 
 In this manner we are preventing the recommendation of a movie that might be similar in keywords and crew but is of much poorer quality than the example movie entered by the user.
 
