@@ -17,13 +17,12 @@ A content based movie recommendation app
 ### Data Prep:
 #### Data Clean-Up: 
 The dataset sourced from Kaggle has 45000~ movies, including movies of multiple languages and of varying length (short films included). For the purposes of this exercise I reduced the dataset to only those movies atleast 100 vote counts each, which brought the dataset down to 6000~ movies. After several permutations and combinations, the categories that were subsequently identified as crucial for recommending movies:
-
-i. Directors
-ii. Writers
-iii. Actors
-iv. Genres
-v. Keywords
-vi. ~~Plot Overview~~
+#. Directors
+#. Writers
+#. Actors
+#. Genres
+#. Keywords
+#. ~~Plot Overview~~
 
 While the initial model involved identifying the above metadata attributes and assigning a fixed weightage to each category toward the final similarity score, I found this method to be unweildy with inadequate recommendation quality. This method had several issues, few of which include:
 Existing keywords in dataset are generally poor and not representative of the main/acclaimed aspects of a movie.
