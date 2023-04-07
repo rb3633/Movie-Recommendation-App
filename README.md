@@ -38,7 +38,7 @@ As IMDb is the single best source of movie information, I used web-scraping to s
 The app uses the following methodology to make meaningful recommendations to the user:
 1) User enters movie name, which we will call the example movie for the rest of this article.
 2) NLP: Reviews of the example movie are sourced and are involved in two aspects of the recommendation:
-  a) Category Weightage: The cleaning steps include stopword removal, tokenization and lemmatization, and further, only the nouns are retained (using wordnet synset part of speech). The resultant bag of words are used to identify the top 50 most used words across all the reviews for the example movie. Each of this 50 words are checked for presence in the following buckets and their counts are totaled towards each category:
+3)    a) Category Weightage: The cleaning steps include stopword removal, tokenization and lemmatization, and further, only the nouns are retained (using wordnet synset part of speech). The resultant bag of words are used to identify the top 50 most used words across all the reviews for the example movie. Each of this 50 words are checked for presence in the following buckets and their counts are totaled towards each category:
     i) 'director', 'direction', 'visuals', 'cinematography', 'style' contribute to the directors category
     ii) 'script', 'screenplay', 'writing', 'dialogue', 'story' contribute to writers category
     iii) 'actors', 'cast', 'performance', 'role' contribute to the actors category
