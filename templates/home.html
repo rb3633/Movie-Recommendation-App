@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Movie Recommendation Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+  <h1 class="appname textclr">Movie Recommendation System</h1>
+  <main>
+    <section class="info-section">
+      <div class="info-desc">
+          <p style="color:black;font-size:25px;" class="textclr">Sometimes it's difficult to pick out a good movie from among the many out there.</p>
+          <p style="color:black;font-size:25px;" class="textclr">Use this recommendation system to help narrow in on your next great watch!
+          </p>
+          <p style="color:black;font-size:25px;" class="textclr">Simply select a movie that you would like to see something similar to and have 10 recommendations in seconds!</p>
+      </div>
+        <button class="start-btn" type="button" onclick="window.location.href='{{ url_for('recrequest') }}';">Let's Go</button>
+    </section>
+  </main>
+</body>
+</html>
+
