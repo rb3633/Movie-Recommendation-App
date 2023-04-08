@@ -30,9 +30,9 @@ The dataset sourced from Kaggle has 45000~ movies, including movies of multiple 
 * ~~Plot Overview~~
 
 While the initial model involved identifying the above metadata attributes and assigning a fixed weightage to each category toward the final similarity score, I found this method to be unweildy with inadequate recommendation quality. This method had several issues, few of which include:
-Existing keywords in dataset are generally poor and not representative of the main/acclaimed aspects of a movie.
-Plot Overview while helpful, does not truly encapsulate what makes a movie similar to another, which resulted in movies of wildly different genre/vibe being scored as similar to each other due to a similarity in their plots at a basal level.
-Fixed weightage of categories fails to take into account the fact that different categories of a movie can be the reason for its popularity.
+* Existing keywords in dataset are generally poor and not representative of the main/acclaimed aspects of a movie.
+* Plot Overview while helpful, does not truly encapsulate what makes a movie similar to another, which resulted in movies of wildly different genre/vibe being scored as similar to each other due to a similarity in their plots at a basal level.
+* Fixed weightage of categories fails to take into account the fact that different categories of a movie can be the reason for its popularity.
 
 In an ideal scenario we would not only take into consideration content-based similarity but individual user preferences, but due to the nature of the dataset and limitations of the exercise we do not have historical ratings or preferences for someone who uses the app. As a result, I decided the next best way to determine the best aspects of a movie would be to analyze the content of the reviews of the movie, which was not present in the dataset. This is where I leveraged the IMDb reviews of the movies.
 
