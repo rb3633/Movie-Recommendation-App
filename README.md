@@ -7,7 +7,7 @@ A content based movie recommendation app
 ![](https://github.com/rb3633/Movie-Recommendation-App/blob/main/.gitignore/Rec_demo_gif.gif)
 
 As seen in the above demo, this app takes an example movie from the user as input and displays the 10 similar movies of comparable or better quality(per user ratings)
-In this video, the example movie of the 2007 hit comedy film Superbad starring Jonah Hill and Michael Cera, directed by Greg Mottala, results in recommendations including This is the End(2013), Pineapple Express(2013), Ferris Bueller's Day Off(1989), Easy A(2010) and 17 again(2009), among others, which are relevant movies with cast, theme, genre and quality.
+In this video, the example movie of the 2007 hit comedy film Superbad starring Jonah Hill and Michael Cera, directed by Greg Mottala, results in recommendations including This is the End(2013), Pineapple Express(2008), Ferris Bueller's Day Off(1986), Easy A(2010) and 17 again(2009), among others, which are relevant movies with cast, theme, genre and quality.
 
 ## Workflow:
 * Movie Data Source: The original dataset was sourced from Kaggle, and was subsequently modified, cleaned, enhanced with additional attributes and loaded into my MySQLdb local server
