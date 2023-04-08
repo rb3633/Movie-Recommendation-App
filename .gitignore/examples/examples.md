@@ -19,12 +19,12 @@
 
 
 
-![P6](The Lion King.PNG)
+![P6]('The Lion King.PNG')
 
 
 
-![P7](La La Land.PNG)
+![P7]('La La Land.PNG')
 
 
 
-![P8](Men In Blank.PNG)
+![P8]('Men In Blank.PNG')
