@@ -11,7 +11,7 @@ A content based movie recommendation app
 * Web App: The app is built using Flask, and HTML and CSS has been used for the front-end components
 
 ## FlowChart:
-![Flow]('.gitignore/Flow.png')
+![Flow](.gitignore/Flow.png)
 
 
 ## Methodology:
