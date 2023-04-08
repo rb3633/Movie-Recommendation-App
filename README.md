@@ -62,7 +62,7 @@ $$threshold = score-((1-(10-score)/10)*(3))$$
 
 In this manner we are preventing the recommendation of a movie that might be similar in keywords and crew but is of much poorer quality than the example movie entered by the user.
 
-We then print out the top 10 such movies that are similar to the example movie.
+We then print out the top 10 such movies that are similar to the example movie. 
 
 
 
