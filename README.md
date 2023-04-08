@@ -4,7 +4,7 @@ A content based movie recommendation app
 ## Movie Recommendation App that uses text analysis, metadata similarity calculations and effective attribute selection and combination to provide relevant and insightful movie recommendations.
 
 ## Demo:
-![](.gitignore/Movie_Rec_Demo.mp4)
+![](https://github.com/rb3633/Movie-Recommendation-App/blob/main/.gitignore/Rec_demo_gif.gif)
 
 ## Workflow:
 * Movie Data Source: The original dataset was sourced from Kaggle, and was subsequently modified, cleaned, enhanced with additional attributes and loaded into my MySQLdb local server
