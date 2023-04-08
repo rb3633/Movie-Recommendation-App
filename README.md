@@ -10,7 +10,7 @@ As seen in the above demo, this app takes an example movie from the user as inpu
 In this video, the example movie of the 2007 hit comedy film Superbad starring Jonah Hill and Michael Cera, directed by Greg Mottala, results in recommendations including This is the End(2013), Pineapple Express(2008), Ferris Bueller's Day Off(1986), Easy A(2010) and 17 again(2009), among others, which are relevant movies with cast, theme, genre and quality.
 
 ## Workflow:
-* Movie Data Source: The original dataset was sourced from Kaggle, and was subsequently modified, cleaned, enhanced with additional attributes and loaded into my MySQLdb local server
+* Movie Data Source: The original dataset was sourced from Rounak Banik on [Kaggle](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset), and was subsequently modified, cleaned, enhanced with additional attributes and loaded into my MySQLdb local server
 * Recommendation Engine: The recommendation engine is built on python, utilizing NLP and cosine similarity to identify the best recommendations for each movie
 * Web App: The app is built using Flask, and HTML and CSS has been used for the front-end components
 
