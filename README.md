@@ -6,6 +6,9 @@ A content based movie recommendation app
 ## Demo:
 ![](https://github.com/rb3633/Movie-Recommendation-App/blob/main/.gitignore/Rec_demo_gif.gif)
 
+As seen in the above demo, this app takes an example movie from the user as input and displays the 10 similar movies of comparable or better quality(per user ratings)
+In this video, the example movie of the 2007 hit comedy film Superbad starring Jonah Hill and Michael Cera, directed by Greg Mottala, results in recommendations including This is the End(2013), Pineapple Express(2013), Ferris Bueller's Day Off(1989), Easy A(2010) and 17 again(2009), among others, which are relevant movies with cast, theme, genre and quality.
+
 ## Workflow:
 * Movie Data Source: The original dataset was sourced from Kaggle, and was subsequently modified, cleaned, enhanced with additional attributes and loaded into my MySQLdb local server
 * Recommendation Engine: The recommendation engine is built on python, utilizing NLP and cosine similarity to identify the best recommendations for each movie
@@ -49,8 +52,8 @@ The app uses the following methodology to make meaningful recommendations to the
 3) Similarity: So now armed with the weightage of each category (Director/Writer/Actor/Genre/Keywords) and the number of repetitions within each category (for eg within Actors category: LeonardoDiCaprio LeonardoDiCaprio LeonardoDiCaprio MarkRuffalo MichelleWilliams), we calculate the cosine similarity of each category of the example movie with the other movies. 
 
 ### Recommendation
-We identify the top similar movies and perform one more calculation to take into the account the user's preferences: 
-The reasoning here is if the user enters an example movie which has a high user rating, then we ideally do not want to recommend a spoof or similar film which has very low ratings. So the following calculation ensures that the recommended movies meet the lower bound threshold calculated from the rating of the example movie-
+Finally we perform one more calculation to take into the account the populous opinion so that the quality of the recomendations are the same or better than the example movie: 
+The reasoning here is if the user enters an example movie which has a high user rating, then we ideally do not want to recommend a movie with very low ratings despite any high similarity. So the following calculation ensures that the recommended movies meet the lower bound threshold calculated from the rating of the example movie-
 
 $$threshold = score-((1-(10-score)/10)*(3))$$
 
