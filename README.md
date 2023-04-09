@@ -65,6 +65,7 @@ In this manner we are preventing the recommendation of a movie that might be sim
 We then print out the top 10 such movies that are similar to the example movie. 
 
 #### Next Steps and Improvements:
+- Improve speed and publish the app officially, potentially on PythonAnywhere
 - When the example movie is directed and/or written by an auteur who makes similar genre of movies, the recommendations tend to skew heavily toward recommending just the filmography of the said artist(Read: Christopher Nolan). This can be mitigated by potentially limiting the number of recommended movies by an auteur (to less than 5 of the 10 recommendations) In addition to this, forcing the director/writer categories to a lower weightage in such scenarios and increasing weightage of keywords could help resolve the issue.
 - Enhance the model by looking at user-based collaborative filtering but will need to identify the proper datasource for that exercise.
 - Juxtapose a neural network based recommendations engine against this model to compare differences in quality and process
