@@ -224,7 +224,7 @@ from pretty_html_table import build_table
 # In[34]:
 
 
-engine = create_engine('mysql://root:PostgrePython_098@localhost:3306/movie_db')
+engine = create_engine('mysql://root:_@_/movie_db')
 
 
 # In[35]:
